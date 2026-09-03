@@ -5,6 +5,7 @@
  * and image imports live here. Never duplicate this information elsewhere.
  */
 
+import logoImg from "@/assets/logo.jpg";
 import heroImg from "@/assets/hero.jpg";
 import classroomImg from "@/assets/classroom.jpg";
 import artImg from "@/assets/art.jpg";
@@ -18,11 +19,16 @@ export type GalleryItem = { src: string; alt: string; caption: string };
 export type Feature = { title: string; description: string; icon: string; color: string };
 
 const phone = "7977119944";
-const whatsapp = "9930856060";
+const whatsapp = "9930850606";
+const phone2 = "9930850606";
 
 export const site = {
   name: "Kindergarten",
   tagline: "Preschool, Daycare & Activities Centre",
+  logo: logoImg,
+  logoAlt: "Kindergarten logo — Preschool, Daycare & Activities Centre",
+  /** Business attributes (from Google Business Profile) */
+  businessAttributes: ["Women-owned business"],
   shortDescription:
     "A joyful, safe and nurturing preschool, daycare and activities centre in Kandivali, Mumbai for children aged 1.5 to 6 years.",
 
@@ -45,8 +51,21 @@ export const site = {
     phoneDisplay: "+91 79771 19944",
     phoneHref: `tel:+91${phone}`,
     whatsapp,
-    whatsappDisplay: "+91 99308 56060",
+    whatsappDisplay: "+91 99308 50606",
     whatsappHref: `https://wa.me/91${whatsapp}`,
+    /** Both numbers support calls AND WhatsApp. */
+    numbers: [
+      {
+        display: "+91 79771 19944",
+        tel: `tel:+91${phone}`,
+        wa: `https://wa.me/91${phone}`,
+      },
+      {
+        display: "+91 99308 50606",
+        tel: `tel:+91${phone2}`,
+        wa: `https://wa.me/91${phone2}`,
+      },
+    ],
     email: "kindergartenkandivali@gmail.com",
     emailHref: "mailto:kindergartenkandivali@gmail.com",
     address:
@@ -58,8 +77,7 @@ export const site = {
     ],
     mapsUrl: "https://maps.app.goo.gl/rMNY8jdQQDNvHewQ7",
     hours: [
-      { days: "Monday – Friday", time: "8:00 AM – 6:30 PM" },
-      { days: "Saturday", time: "9:00 AM – 1:00 PM" },
+      { days: "Monday – Saturday", time: "8:00 AM – 8:00 PM" },
       { days: "Sunday", time: "Closed" },
     ],
   },

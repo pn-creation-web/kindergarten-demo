@@ -7,7 +7,15 @@ export function Footer() {
       <div className="bg-accent-stripe h-1.5 w-full" aria-hidden="true" />
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-3">
         <div>
-          <p className="font-display text-2xl font-extrabold">{site.name}</p>
+          <img
+            src={site.logo}
+            alt={site.logoAlt}
+            width={340}
+            height={72}
+            loading="lazy"
+            className="h-12 w-auto rounded-md bg-white p-1"
+          />
+          <p className="font-display mt-3 text-2xl font-extrabold">{site.name}</p>
           <p className="mt-1 text-sm opacity-85">{site.tagline}</p>
           <p className="mt-4 max-w-sm text-sm opacity-80">{site.shortDescription}</p>
         </div>
@@ -39,12 +47,14 @@ export function Footer() {
                 {site.contact.address}
               </a>
             </li>
-            <li className="flex items-center gap-2">
-              <Phone className="size-4 shrink-0" aria-hidden="true" />
-              <a href={site.contact.phoneHref} className="opacity-85 hover:opacity-100">
-                {site.contact.phoneDisplay}
-              </a>
-            </li>
+            {site.contact.numbers.map((n) => (
+              <li key={n.tel} className="flex items-center gap-2">
+                <Phone className="size-4 shrink-0" aria-hidden="true" />
+                <a href={n.tel} className="opacity-85 hover:opacity-100">
+                  {n.display}
+                </a>
+              </li>
+            ))}
             <li className="flex items-center gap-2">
               <Mail className="size-4 shrink-0" aria-hidden="true" />
               <a href={site.contact.emailHref} className="break-all opacity-85 hover:opacity-100">

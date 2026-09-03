@@ -1,6 +1,6 @@
 import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
-import { buildWhatsAppLink, site } from "@/data/site";
+import { site } from "@/data/site";
 
 export function Contact() {
   return (
@@ -40,28 +40,31 @@ export function Contact() {
             </a>
 
             <div className="grid gap-4 sm:grid-cols-2">
-              <a
-                href={site.contact.phoneHref}
-                className="flex items-start gap-3 rounded-2xl border border-border p-5 transition-colors hover:bg-secondary"
-              >
-                <Phone className="mt-0.5 size-5 shrink-0 text-cyan" aria-hidden="true" />
-                <span>
-                  <span className="block font-bold">Call</span>
-                  <span className="text-sm text-foreground/75">{site.contact.phoneDisplay}</span>
-                </span>
-              </a>
-              <a
-                href={buildWhatsAppLink(`Hi ${site.name}! I have a question.`)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start gap-3 rounded-2xl border border-border p-5 transition-colors hover:bg-secondary"
-              >
-                <MessageCircle className="mt-0.5 size-5 shrink-0 text-lime" aria-hidden="true" />
-                <span>
-                  <span className="block font-bold">WhatsApp</span>
-                  <span className="text-sm text-foreground/75">{site.contact.whatsappDisplay}</span>
-                </span>
-              </a>
+              {site.contact.numbers.map((n) => (
+                <div
+                  key={n.tel}
+                  className="flex items-start gap-3 rounded-2xl border border-border p-5"
+                >
+                  <Phone className="mt-0.5 size-5 shrink-0 text-cyan" aria-hidden="true" />
+                  <span>
+                    <span className="block font-bold">{n.display}</span>
+                    <span className="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-sm font-semibold">
+                      <a href={n.tel} className="text-primary hover:underline">
+                        Call
+                      </a>
+                      <a
+                        href={n.wa}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-lime hover:underline"
+                      >
+                        <MessageCircle className="size-4" aria-hidden="true" />
+                        WhatsApp
+                      </a>
+                    </span>
+                  </span>
+                </div>
+              ))}
               <a
                 href={site.contact.emailHref}
                 className="flex items-start gap-3 rounded-2xl border border-border p-5 transition-colors hover:bg-secondary sm:col-span-2"
