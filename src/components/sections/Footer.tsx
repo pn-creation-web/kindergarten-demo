@@ -10,13 +10,11 @@ export function Footer() {
           <img
             src={site.logo}
             alt={site.logoAlt}
-            width={340}
-            height={72}
+            width={1920}
+            height={394}
             loading="lazy"
-            className="h-12 w-auto rounded-md bg-white p-1"
+            className="h-12 w-auto rounded-xl bg-white/95 px-3 py-2"
           />
-          <p className="font-display mt-3 text-2xl font-extrabold">{site.name}</p>
-          <p className="mt-1 text-sm opacity-85">{site.tagline}</p>
           <p className="mt-4 max-w-sm text-sm opacity-80">{site.shortDescription}</p>
         </div>
 
