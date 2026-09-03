@@ -128,7 +128,6 @@ export const site = {
       "Small groups, trained and caring teachers, CCTV-monitored premises and a bright, child-proofed centre mean parents can relax while their little ones discover, create and make friends.",
     ],
     highlights: [
-      "Proudly women-owned business",
       "Play-based, age-appropriate curriculum",
       "Trained, caring and background-verified staff",
       "Hygienic, child-safe and CCTV-monitored premises",

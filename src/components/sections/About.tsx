@@ -19,6 +19,16 @@ export function About() {
         </Reveal>
 
         <Reveal delay={0.05}>
+          <ul className="mb-3 flex flex-wrap gap-2">
+            {site.businessAttributes.map((a) => (
+              <li
+                key={a}
+                className="rounded-full bg-magenta/10 px-3 py-1 text-xs font-bold text-magenta"
+              >
+                {a}
+              </li>
+            ))}
+          </ul>
           <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">
             {site.about.heading}
           </h2>
