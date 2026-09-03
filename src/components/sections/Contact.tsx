@@ -1,6 +1,6 @@
 import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
-import { buildWhatsAppLink, site } from "@/data/site";
+import { site } from "@/data/site";
 
 export function Contact() {
   return (
