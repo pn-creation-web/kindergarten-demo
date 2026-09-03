@@ -45,7 +45,7 @@ export function Activities() {
                 className="rounded-2xl bg-card p-6 shadow-sm transition-transform hover:-translate-y-1"
               >
                 <span
-                  className={`inline-flex size-12 items-center justify-center rounded-2xl ${tints[f.color] ?? tints.primary}`}
+                  className={`inline-flex size-12 items-center justify-center rounded-2xl ${tints[f.color] ?? tints['primary']}`}
                 >
                   <Icon className="size-6" aria-hidden="true" />
                 </span>
