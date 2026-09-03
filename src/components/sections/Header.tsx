@@ -20,22 +20,14 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-        <a href="#home" className="flex items-center gap-2" aria-label={`${site.name} home`}>
+        <a href="#home" className="flex items-center" aria-label={`${site.name} home`}>
           <img
             src={site.logo}
             alt={site.logoAlt}
-            width={340}
-            height={72}
-            className="h-10 w-auto rounded-md"
+            width={1920}
+            height={394}
+            className="h-9 w-auto sm:h-11"
           />
-          <span className="hidden leading-none md:block">
-            <span className="font-display block text-xl font-extrabold text-primary">
-              {site.name}
-            </span>
-            <span className="hidden text-[11px] font-semibold text-muted-foreground sm:block">
-              {site.tagline}
-            </span>
-          </span>
         </a>
 
         <nav aria-label="Main" className="hidden items-center gap-1 lg:flex">

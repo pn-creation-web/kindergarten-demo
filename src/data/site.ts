@@ -5,7 +5,7 @@
  * and image imports live here. Never duplicate this information elsewhere.
  */
 
-import logoImg from "@/assets/logo.jpg";
+import logoImg from "@/assets/logo.png";
 import heroImg from "@/assets/hero.jpg";
 import classroomImg from "@/assets/classroom.jpg";
 import artImg from "@/assets/art.jpg";
